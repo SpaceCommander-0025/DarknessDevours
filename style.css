@@ -1,17 +1,9 @@
 /* Typography & Base */
 body {
-  /* margin: 0;
-  font-family: 'Cinzel', serif;
-  background: #0d0d0d;
-  color: #e0e0e0; */
-
-  body {
   margin: 0;
   font-family: 'Cinzel', serif;
-  background: radial-gradient(circle at center, #2a2a2a 0%, #1a1a1a 50%, #0d0d0d 100%);
+  background: #0d0d0d;
   color: #e0e0e0;
-  overflow-x: hidden;
-}
 
 }
 
