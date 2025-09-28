@@ -165,8 +165,8 @@ section {
 /* Hotspot: visible circle */
 .hotspot {
     position: absolute;
-    top: 400px;     /* Adjust this */
-    left: 150px;    /* Adjust this */
+    top: 200px;     /* Adjust this */
+    left: 800px;    /* Adjust this */
     width: 60px;
     height: 60px;
     background-color: rgba(255, 0, 0, 0.4);  /* Semi-transparent red */
