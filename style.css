@@ -184,3 +184,30 @@ section {
 .location-detail {
     margin-top: 4rem;
 }
+
+.hotspot-container {
+    position: absolute;
+}
+
+.popup {
+    display: none;
+    position: absolute;
+    top: -40px;
+    left: -20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.hotspot-container:hover .popup {
+    display: block;
+    opacity: 1;
+}
+
