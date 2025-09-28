@@ -1,39 +1,30 @@
-/* style.css */
+/* Typography & Base */
 body {
   margin: 0;
   font-family: 'Cinzel', serif;
   background: #0d0d0d;
   color: #e0e0e0;
-  overflow: hidden;
-}
-
-.overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: url('images/smoke.gif') center/cover no-repeat;
-  opacity: 0.05;
-  pointer-events: none;
-  z-index: -1;
 }
 
 .title {
-  font-size: 3rem;
   text-align: center;
-  margin-top: 2rem;
+  font-size: 3rem;
   color: #bb86fc;
-  text-shadow: 0 0 10px #7000ff;
+  margin-top: 2rem;
+  text-shadow: 0 0 15px #7a00ff;
 }
 
 .subtitle {
   text-align: center;
-  font-style: italic;
-  color: #666;
+  font-family: 'Uncial Antiqua', cursive;
+  color: #888;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 
 .intro {
   text-align: center;
-  margin-top: 5rem;
+  padding: 3rem;
 }
 
 #enterBtn {
@@ -41,20 +32,117 @@ body {
   border: 2px solid #bb86fc;
   color: #bb86fc;
   padding: 1rem 2rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
   cursor: pointer;
-  margin-top: 2rem;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 #enterBtn:hover {
   background: #bb86fc;
   color: #0d0d0d;
-  box-shadow: 0 0 20px #bb86fc;
+  box-shadow: 0 0 15px #bb86fc;
 }
 
 .hidden {
   display: none;
 }
 
-/* Animate glowing runes, flickering torches, etc. later */
+/* Overlay Smoke Effect */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('images/torch.gif') center/cover no-repeat;
+  opacity: 0.03;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Navigation */
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: #bb86fc;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  text-shadow: 0 0 10px #bb86fc;
+}
+
+/* Section Styling */
+section {
+  padding: 2rem 4rem;
+}
+
+/* Character Vault */
+.character-vault {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.character-vault .card {
+  background: #1a1a1a;
+  border: 1px solid #444;
+  padding: 1rem;
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(100, 100, 100, 0.2);
+  transition: 0.3s ease;
+}
+
+.character-vault .card:hover {
+  box-shadow: 0 0 20px #bb86fc;
+}
+
+/* Map */
+.map {
+  width: 100%;
+  max-width: 800px;
+  border: 2px solid #444;
+  margin: 2rem auto;
+  display: block;
+  box-shadow: 0 0 10px #333;
+}
+/* Torch containers */
+.torch-container {
+  position: fixed;
+  z-index: 10;
+  width: 100px;
+  height: auto;
+  pointer-events: none; /* allows clicking through */
+  opacity: 0.8;
+}
+
+/* Specific positions */
+.top-left {
+  top: 20px;
+  left: 20px;
+}
+
+.top-right {
+  top: 20px;
+  right: 20px;
+}
+
+/* Torch image */
+.torch {
+  width: 100%;
+  height: auto;
+}
