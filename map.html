@@ -75,6 +75,27 @@
         </section>
     </main>
     <script>
+
+        function switchTab(tabId) {
+          // Hide all tab contents
+          document.querySelectorAll('.tab-content').forEach(tab => {
+            tab.classList.remove('active');
+          });
+        
+          // Remove 'active' from all tab buttons
+          document.querySelectorAll('.tab-button').forEach(btn => {
+            btn.classList.remove('active');
+          });
+        
+          // Show the selected tab
+          document.getElementById(tabId).classList.add('active');
+        
+          // Set the clicked button to active
+          const clickedButton = Array.from(document.querySelectorAll('.tab-button'))
+            .find(btn => btn.textContent.toLowerCase().includes(tabId.split('-')[0]));
+          if (clickedButton) clickedButton.classList.add('active');
+        }
+
     // Sample location data
     const locations = [
       {
