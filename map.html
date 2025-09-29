@@ -37,7 +37,6 @@
               <h2>Search for a Location</h2>
               <input type="text" id="searchInput" placeholder="Type location name..." />
               <button onclick="searchLocation()">Search</button>
-              <ul id="searchSuggestions" class="suggestions"></ul>
               <div id="results"></div>
                 <div class="image-gallery">
                     <img src="image.png" alt="Witch Hut">
@@ -103,28 +102,6 @@
           if (clickedButton) clickedButton.classList.add('active');
         }
 
-        document.getElementById('searchInput').addEventListener('input', function() {
-          const input = this.value.toLowerCase();
-          const suggestionBox = document.getElementById('searchSuggestions');
-          suggestionBox.innerHTML = '';
-        
-          if (input.length < 2) return;
-        
-          const matches = locations.filter(loc => loc.name.toLowerCase().includes(input));
-        
-          if (matches.length > 0) {
-            matches.forEach(match => {
-              const li = document.createElement('li');
-              li.textContent = match.name;
-              li.addEventListener('click', () => {
-                document.getElementById('searchInput').value = match.name;
-                suggestionBox.innerHTML = '';
-                searchLocation();
-              });
-              suggestionBox.appendChild(li);
-            });
-          }
-        });
 
 
         // Sample location data
