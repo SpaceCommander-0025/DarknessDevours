@@ -33,10 +33,16 @@
         
             <!-- Tab: Search -->
             <section id="search-tab" class="tab-content active">
+            <div class="location-panel">
               <h2>Search for a Location</h2>
               <input type="text" id="searchInput" placeholder="Type location name..." />
               <button onclick="searchLocation()">Search</button>
               <div id="results"></div>
+                <div class="image-gallery">
+                    <img src="image.png" alt="Witch Hut">
+                    <img src="path/to/image2.jpg" alt="Image 2">
+                </div>
+            </div>
             </section>
         
             <!-- Tab: Map -->
@@ -104,7 +110,8 @@
             Some believe she was eventually able to look into the lake and see whatever it was she desired to see. Almost like the glass of a mirror. Until she tried to walk on the lake to get a better look, she drowned.
             
             Ever since, adventurers and common folk alike who travel up near witchglass lake are often never heard from again. Those that have on a rare occassion, are forever changed.
-            `
+            `,
+        images: ["images/image.png", "images/tomb_fire2.jpg"]
       },
       {
         name: "Statue of Liberty",
@@ -116,20 +123,43 @@
       }
     ];
 
-    function searchLocation() {
-      const input = document.getElementById('searchInput').value.toLowerCase();
-      const resultDiv = document.getElementById('results');
-      const match = locations.find(loc => loc.name.toLowerCase().includes(input));
+        function searchLocation() {
+          const input = document.getElementById('searchInput').value.toLowerCase();
+          const resultDiv = document.getElementById('results');
+          const matches = locations.filter(loc => loc.name.toLowerCase().includes(input));
+        
+          if (matches.length === 0) {
+            resultDiv.innerHTML = `<p>No location found with that name.</p>`;
+            return;
+          }
+        
+          // Show each match as a styled panel
+          resultDiv.innerHTML = matches.map(loc => {
+            const imagesHTML = loc.images?.map(src => `<img src="${src}" alt="${loc.name} image">`).join('') || '';
+            return `
+              <div class="location-panel">
+                <h3>${loc.name}</h3>
+                <p>${loc.description.trim()}</p>
+                <div class="image-gallery">${imagesHTML}</div>
+              </div>
+            `;
+          }).join('');
+        }
 
-      if (match) {
-        resultDiv.innerHTML = `
-          <h3>${match.name}</h3>
-          <p>${match.description}</p>
-        `;
-      } else {
-        resultDiv.innerHTML = `<p>No location found with that name.</p>`;
-      }
-    }
+    // function searchLocation() {
+    //   const input = document.getElementById('searchInput').value.toLowerCase();
+    //   const resultDiv = document.getElementById('results');
+    //   const match = locations.find(loc => loc.name.toLowerCase().includes(input));
+
+    //   if (match) {
+    //     resultDiv.innerHTML = `
+    //       <h3>${match.name}</h3>
+    //       <p>${match.description}</p>
+    //     `;
+    //   } else {
+    //     resultDiv.innerHTML = `<p>No location found with that name.</p>`;
+    //   }
+    // }
   </script>
 </body>
 </html>
