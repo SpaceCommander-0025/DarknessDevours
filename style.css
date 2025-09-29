@@ -248,3 +248,53 @@ section {
 .tab-content.active {
   display: block;
 }
+
+.location-panel {
+  background-color: #f9f9f9;
+  border: 2px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.location-panel h3 {
+  margin-top: 0;
+  font-family: 'Cinzel', serif;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.image-gallery img {
+  width: 150px;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+.suggestions {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  max-width: 400px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: absolute;
+  z-index: 10;
+}
+
+.suggestions li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.suggestions li:hover {
+  background-color: #f0f0f0;
+}
