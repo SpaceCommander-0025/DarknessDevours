@@ -24,7 +24,38 @@
 
     <main>
 
-        <h2>Search for a Location</h2>
+          <div class="tabs">
+            <div class="tab-buttons">
+              <button class="tab-button active" onclick="switchTab('search-tab')">Search</button>
+              <button class="tab-button" onclick="switchTab('map-tab')">Map</button>
+              <button class="tab-button" onclick="switchTab('about-tab')">About</button>
+            </div>
+        
+            <!-- Tab: Search -->
+            <section id="search-tab" class="tab-content active">
+              <h2>Search for a Location</h2>
+              <input type="text" id="searchInput" placeholder="Type location name..." />
+              <button onclick="searchLocation()">Search</button>
+              <div id="results"></div>
+            </section>
+        
+            <!-- Tab: Map -->
+            <section id="map-tab" class="tab-content">
+              <h2>Interactive Map</h2>
+              <div class="map-container">
+                <img src="images/nocctherra.jpg" alt="Campaign Map" class="map" />
+              </div>
+            </section>
+        
+            <!-- Tab: About -->
+            <section id="about-tab" class="tab-content">
+              <h2>About This Map</h2>
+              <p>This interactive map helps you explore key locations in your campaign world. Use the search feature or click directly on the map when hotspots are added.</p>
+            </section>
+          </div>
+
+
+        <!-- <h2>Search for a Location</h2>
           <input type="text" id="searchInput" placeholder="Type location name..." />
           <button onclick="searchLocation()">Search</button>
         
@@ -35,7 +66,7 @@
 
             <div class="map-container">
                 <img src="images/nocctherra.jpg" alt="Campaign Map" class="map" />
-            </div>
+            </div> -->
 
             <!-- <div class="hotspot-container" style="top: 150px; left: 150px;">
                   <a href="#location1" class="hotspot"></a>
