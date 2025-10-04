@@ -9,7 +9,7 @@ body {
 
 /* Paragraphs - clean, readable body text */
 p {
-  font-family: 'Cinzel', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 1.05rem;
   line-height: 1.75;
   color: #e4e4e4;
@@ -19,7 +19,7 @@ p {
 
 /* Optional: if <pre> is used for text blocks */
 pre {
-  font-family: 'Cinzel', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 1.05rem;
   line-height: 1.75;
   color: #d9d9d9;
@@ -43,7 +43,7 @@ h3 {
 }
 
 /* h4 - sub-section title */
-/* h4 {
+h4 {
   font-family: 'Cinzel', serif;
   font-size: 1.3rem;
   color: #d8a84a;
@@ -52,9 +52,9 @@ h3 {
   font-weight: 600;
   border-left: 4px solid #a87e2d;
   padding-left: 10px;
-} */
+}
 
-h4 {
+/* h4 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.4rem;
   color: #d8a84a;
@@ -63,7 +63,7 @@ h4 {
   font-weight: 500;
   border-left: 4px solid #a87e2d;
   padding-left: 10px;
-}
+} */
 
 
 .title {
