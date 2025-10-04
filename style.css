@@ -17,7 +17,7 @@ p {
   letter-spacing: 0.3px;
 }
 
-p.normal {
+.normal {
   font-family: 'Cinzel', serif;
   font-size: 1.05rem;
   line-height: 1.75;
