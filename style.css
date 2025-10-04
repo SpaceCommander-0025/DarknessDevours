@@ -22,6 +22,7 @@ pre {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.05rem;
   line-height: 1.75;
+  white-space: pre-line;
   color: #d9d9d9;
   background-color: #282828;
   padding: 15px;
