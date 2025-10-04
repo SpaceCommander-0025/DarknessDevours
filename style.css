@@ -17,6 +17,15 @@ p {
   letter-spacing: 0.3px;
 }
 
+p.normal {
+  font-family: 'Cinzel', serif;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #e4e4e4;
+  margin-bottom: 1.5em;
+  letter-spacing: 0.3px;
+}
+
 /* Optional: if <pre> is used for text blocks */
 pre {
   font-family: 'Cormorant Garamond', serif;
