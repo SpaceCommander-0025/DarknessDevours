@@ -26,6 +26,37 @@ p {
   letter-spacing: 0.3px;
 }
 
+.session-toggle {
+  background-color: #1a1a1a;
+  color: #bb86fc;
+  font-family: 'Cinzel', serif;
+  font-size: 1.2rem;
+  padding: 1rem;
+  width: 100%;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  border-bottom: 2px solid #a87e2d;
+  transition: background 0.3s;
+}
+
+.session-toggle:hover {
+  background-color: #292929;
+}
+
+.session-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  padding: 0 1rem;
+}
+
+.session-note.active .session-content {
+  max-height: 1000px; /* enough for your content */
+  padding-top: 1rem;
+}
+
+
 /* Optional: if <pre> is used for text blocks */
 pre {
   font-family: 'Cormorant Garamond', serif;
