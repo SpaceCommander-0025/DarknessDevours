@@ -84,7 +84,7 @@ h3 {
 }
 
 /* h4 - sub-section title  */
-h4 {
+h2, h4 {
   font-family: 'Cinzel', serif;
   font-size: 1.3rem;
   color: #d8a84a;
