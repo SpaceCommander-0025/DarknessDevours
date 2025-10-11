@@ -62,11 +62,11 @@ a:link {
 }
 
 a:visited {
-  color: red; /* Color for visited links */
+  color: blue; /* Color for visited links */
 }
 
 a:hover {
-  color: blue; /* Color when the mouse hovers over the link */
+  color: red; /* Color when the mouse hovers over the link */
   text-decoration: underline; /* Adds underline on hover */
 }
 
