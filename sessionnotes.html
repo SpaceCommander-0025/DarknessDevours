@@ -171,17 +171,17 @@
 </script> -->
 
     <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggles = document.querySelectorAll(".session-toggle");
-
-    toggles.forEach(toggle => {
-      toggle.addEventListener("click", function () {
-        const sessionNote = this.closest(".session-note");
-        sessionNote.classList.toggle("active");
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggles = document.querySelectorAll(".session-toggle");
+    
+        toggles.forEach(toggle => {
+          toggle.addEventListener("click", function () {
+            const sessionNote = this.closest(".session-note");
+            sessionNote.classList.toggle("active");
+          });
+        });
       });
-    });
-  });
-</script>
+    </script>
 
 
 </body>
