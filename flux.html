@@ -37,6 +37,7 @@
         <button class="tab-button" onclick="showTab('stats')">Stats</button>
         <button class="tab-button" onclick="showTab('backstory')">Backstory and Puzzles</button>
         <button class="tab-button" onclick="showTab('equipment')">Inventory and What You Know</button>
+        <button class="tab-button" onclick="showTab('history')">History</button>
       </div>
 
       <!-- Tab Content -->
@@ -231,6 +232,43 @@ The dove lies broken. Pieces remain. Your future.
       </div>
 
     </section>
+
+    <div id="history" class="tab-content active">
+        <button class="session-toggle">Necromancer Queen and Fragment History</button>
+          <div class="session-content">
+          <p>She was the last unifying ruler of Gravemarch - wise, beloved, and feared. She mastered both white and dark necromancy seeking to create true balance between life and death. She discovered
+            a forbidden ritual that could allow her to fuse soul and undeath into a pure immortal state. One that didn't require phylacteries or vampirism. However, the spell required a perfect soul and
+            rather than taking another's, she offered her own. Her Court Mage, Her Champion, and Secret Lover begged her not to go through with it. But she refused believing the ritual was the key to peace in Gravemarch.
+            <br><br>
+            0AE Ascension Attempt and The Shattering
+            <br><br>
+            Her attempt to become the first white lich fueled by her soul failed. It shattered her soul across time and bloodlines, scattering fragments into the Noble Families over generations. It created a shockwave of 
+            death magic through Gravemarch. A big proponent of the reason why Gravemarch is a magnet for the dead. Several Nobles and many citizens nearby are caught in the blast. Some of them killed, others marked.
+            <br><br>
+            20AE Fragment Drift Begins
+            <br><br>
+            Soul fragments begin to anchor to nearby vessels often new borns or souls aligned with what the Queen's emotional state was at the time of her demise. Four fragments enter the fold revealing themselves.
+            Because of the power of the magic, not all the hosts could handle the power within them. It would kill them and they would die young ages. The locals suspect a curse.
+            <br><br>
+            75AE Fragment Legacy Begins
+            <br><br>
+            Gravemarch's Necromancer Nobles form The Spires of Lineage and agree to bind the fragments to their family lines using soul tethering rituals. This is the origin of the 7 Necromantic Houses. Each Noble
+            family anoints a 'Spire' usually a magically gifted child.
+            <br><br>
+            ~ 200AE - 300AE Fragment Cycle Continues
+            <br><br>
+            Upon death of a fragments host, the shard passes to a newborn child of the bloodline or if no heir exists, they can drift to worthy beings. Leads to the 'lost' state of a fragment allowing them to cross
+            outside of the Noble bloodlines.
+            <br><br>
+            ~ Current Era Fragment War Begins
+            <br><br>
+            Necromantic powers have sought after the fragments for generations. Yet without knowing how to track those who have the fragment and to find them all within a lifetime has never been done. Perhaps for the
+            best since the union of these fragments would bring back one heck of a power entity.
+          </p>
+          </div>
+      </div>
+
+    </section>
   </main>
 
   <script>
@@ -244,6 +282,23 @@ The dove lies broken. Pieces remain. Your future.
       document.getElementById(tabId).classList.add('active');
       event.target.classList.add('active');
     }
+    document.addEventListener("DOMContentLoaded", function () {
+        const toggles = document.querySelectorAll(".session-toggle");
+    
+        toggles.forEach(toggle => {
+          toggle.addEventListener("click", function () {
+            const content = this.nextElementSibling;
+    
+            if (content.style.maxHeight) {
+              // Collapse it
+              content.style.maxHeight = null;
+            } else {
+              // Expand it to the actual scroll height
+              content.style.maxHeight = content.scrollHeight + "px";
+            }
+          });
+        });
+      });
   </script>
 
 </body>
