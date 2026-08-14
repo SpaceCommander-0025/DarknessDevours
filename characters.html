@@ -6,6 +6,10 @@
   <title>Characters and NPC's</title>
   <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Uncial+Antiqua&display=swap" rel="stylesheet">
+  <style>
+    .search-container { margin-bottom: 20px; }
+    input[type="search"] { padding: 8px; width: 250px; font-size: 16px; }
+  </style>
 </head>
 <body>
     <header>
@@ -32,15 +36,51 @@
         <h2><a href="flux.html">Flux</a></h2>
       
         <br><h4>Non-Player Characters</h4>
-      
-        <h2><a href="npc/riddick.html">Riddick Alexsander</h2>
-        <h2><a href="npc/devilayne.html">Devilayne Anthorpe</h2>
-        <h2><a href="npc/theodara.html">Theodara Elarocen</h2>
-        <h2><a href="npc/elric.html">Elric Elarocen</h2>
-        <h2><a href="npc/cienna.html">Cienna Elarocen</h2>
-        <h2><a href="npc/lucien.html">Lucien Elarocen</h2>
-        <h2><a href="npc/nara.html">Nara Mortavec</h2>
-        <h2><a href="npc/maribel.html">Maribel</h2>
+
+      <!-- 1. Semantic Search Wrapper -->
+      <search class="search-container">
+        <input 
+          type="search" 
+          id="characterSearch" 
+          placeholder="Search characters..." 
+          oninput="filterCharacters()"
+        >
+      </search>
+
+      <ul id="characterList">
+        <li><h2><a href="npc/riddick.html">Riddick Alexsander</h2></li>
+        <li><h2><a href="npc/devilayne.html">Devilayne Anthorpe</h2></li>
+        <li><h2><a href="npc/theodara.html">Theodara Elarocen</h2></li>
+        <li><h2><a href="npc/elric.html">Elric Elarocen</h2></li>
+        <li><h2><a href="npc/cienna.html">Cienna Elarocen</h2></li>
+        <li><h2><a href="npc/lucien.html">Lucien Elarocen</h2></li>
+        <li><h2><a href="npc/nara.html">Nara Mortavec</h2></li>
+        <li><h2><a href="npc/maribel.html">Maribel</h2></li>
+      </ul>
     </main>
+
+  <!-- 3. The Filter Logic -->
+  <script>
+    function filterCharacters() {
+      // Get the user input value and convert to lowercase for case-insensitivity
+      const query = document.getElementById('characterSearch').value.toLowerCase();
+      
+      // Grab all list item elements
+      const listItems = document.querySelectorAll('#characterList li');
+      
+      // Loop through each character item
+      listItems.forEach(item => {
+        const characterName = item.textContent.toLowerCase();
+        
+        // Toggle display status based on string match
+        if (characterName.includes(query)) {
+          item.style.display = ''; // Shows the item
+        } else {
+          item.style.display = 'none'; // Hides the item
+        }
+      });
+    }
+  </script>
+      
 </body>
 </html>
