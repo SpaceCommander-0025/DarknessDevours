@@ -9,8 +9,8 @@
   <style>
     .search-container { margin-bottom: 20px; }
     input[type="search"] { padding: 8px; width: 250px; font-size: 16px; }
-    .ul-search { list-style: none; padding: 0; }
-    .li-search { padding: 8px 12px; width: 230px; }
+    ul:not(nav ul) { list-style: none; padding: 0; }
+    li:not(nav ul li) { padding: 8px 12px; width: 230px; }
   </style>
 </head>
 <body>
@@ -49,15 +49,15 @@
         >
       </search>
 
-      <ul-search id="characterList">
-        <li-search><h2><a href="npc/riddick.html">Riddick Alexsander</h2></li>
-        <li-search><h2><a href="npc/devilayne.html">Devilayne Anthorpe</h2></li>
-        <li-search><h2><a href="npc/theodara.html">Theodara Elarocen</h2></li>
-        <li-search><h2><a href="npc/elric.html">Elric Elarocen</h2></li>
-        <li-search><h2><a href="npc/cienna.html">Cienna Elarocen</h2></li>
-        <li-search><h2><a href="npc/lucien.html">Lucien Elarocen</h2></li>
-        <li-search><h2><a href="npc/nara.html">Nara Mortavec</h2></li>
-        <li-search><h2><a href="npc/maribel.html">Maribel</h2></li>
+      <ul id="characterList">
+        <li><h2><a href="npc/riddick.html">Riddick Alexsander</h2></li>
+        <li><h2><a href="npc/devilayne.html">Devilayne Anthorpe</h2></li>
+        <li><h2><a href="npc/theodara.html">Theodara Elarocen</h2></li>
+        <li><h2><a href="npc/elric.html">Elric Elarocen</h2></li>
+        <li><h2><a href="npc/cienna.html">Cienna Elarocen</h2></li>
+        <li><h2><a href="npc/lucien.html">Lucien Elarocen</h2></li>
+        <li><h2><a href="npc/nara.html">Nara Mortavec</h2></li>
+        <li><h2><a href="npc/maribel.html">Maribel</h2></li>
       </ul>
     </main>
 
