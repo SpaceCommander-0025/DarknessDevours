@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>A Blight</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Uncial+Antiqua&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="title">A Blight</h1>
+        <p class="subtitle">Recap for previous sessions!</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="characters.html">Characters and NPC's</a></li>
+                <li><a href="sessionnotes.html">Session Notes</a></li>
+                <li><a href="lore.html">World Lore</a></li>
+                <li><a href="map.html">Map</a></li>
+                <li><a href="items.html">Items</a></li>
+                <li><a href="status.html">Characters Status</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+          <!--Poster-->
+          <section class="session-note">
+          <button class="session-toggle">One Shot Poster</button>
+          <div class="session-content">
+              <img src="images/ABlight.png" alt="Darkness Devours Poster" style="max-width: 300px; border-radius: 10px; box-shadow: 0 0 20px #444;">
+          </div>
+          </section>
+
+  </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggles = document.querySelectorAll(".session-toggle");
+    
+        toggles.forEach(toggle => {
+          toggle.addEventListener("click", function () {
+            const content = this.nextElementSibling;
+    
+            if (content.style.maxHeight) {
+              // Collapse it
+              content.style.maxHeight = null;
+            } else {
+              // Expand it to the actual scroll height
+              content.style.maxHeight = content.scrollHeight + "px";
+            }
+          });
+        });
+      });
+    </script>
+    
+</body>
+</html>
