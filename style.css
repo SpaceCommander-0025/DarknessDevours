@@ -63,6 +63,7 @@ a:link {
 
 a:visited {
   color: blue; /* Color for visited links */
+  text-decoration: none; /* Removes the underline */
 }
 
 a:hover {
