@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Character Search Bar</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    /* Style the search container using semantic modern HTML elements */
+    .search-container { margin-bottom: 20px; }
+    input[type="search"] { padding: 8px; width: 250px; font-size: 16px; }
+    ul { list-style: none; padding: 0; }
+    li { padding: 8px 12px; border-bottom: 1px solid #ddd; width: 230px; }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Semantic Search Wrapper -->
+  <search class="search-container">
+    <input 
+      type="search" 
+      id="characterSearch" 
+      placeholder="Search characters..." 
+      oninput="filterCharacters()"
+    >
+  </search>
+
+  <!-- 2. The Character List -->
+  <ul id="characterList">
+    <li>Harry Potter</li>
+    <li>Hermione Granger</li>
+    <li>Ron Weasley</li>
+    <li>Albus Dumbledore</li>
+    <li>Severus Snape</li>
+    <li>Luna Lovegood</li>
+  </ul>
+
+  <!-- 3. The Filter Logic -->
+  <script>
+    function filterCharacters() {
+      // Get the user input value and convert to lowercase for case-insensitivity
+      const query = document.getElementById('characterSearch').value.toLowerCase();
+      
+      // Grab all list item elements
+      const listItems = document.querySelectorAll('#characterList li');
+      
+      // Loop through each character item
+      listItems.forEach(item => {
+        const characterName = item.textContent.toLowerCase();
+        
+        // Toggle display status based on string match
+        if (characterName.includes(query)) {
+          item.style.display = ''; // Shows the item
+        } else {
+          item.style.display = 'none'; // Hides the item
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
