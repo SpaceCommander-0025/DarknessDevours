@@ -56,6 +56,10 @@ p {
   padding-top: 1rem;
 } */
 
+a {
+  text-decoration: none;
+}
+
 a:link {
   color: green; /* Color for unvisited links */
   text-decoration: none; /* Removes the underline */
