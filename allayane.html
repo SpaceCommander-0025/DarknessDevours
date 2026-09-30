@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Allayane Jaquette</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Uncial+Antiqua&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <h1 class="title">Character Profile</h1>
+    <p class="subtitle">Allayane Jaquette</p>
+    <nav>
+      <ul>
+        <li><a href="characters.html">Characters and NPC's</a></li>
+          <li><a href="sessionnotes.html">Session Notes</a></li>
+          <li><a href="lore.html">World Lore</a></li>
+          <li><a href="map.html">Map</a></li>
+          <li><a href="items.html">Items</a></li>
+          <li><a href="status.html">Characters Status</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="character-profile" style="padding: 2rem;">
+
+      <!-- Portrait -->
+      <div style="text-align: center;">
+        <img src="images/allayane.jpg" alt="Allayane Portrait" style="max-width: 300px; border-radius: 10px; box-shadow: 0 0 20px #444;">
+      </div>
+
+      <!-- Tabs -->
+      <div class="tab-buttons">
+        <button class="tab-button active" onclick="showTab('overview')">Overview</button>
+        <button class="tab-button" onclick="showTab('stats')">Stats</button>
+        <button class="tab-button" onclick="showTab('backstory')">Backstory</button>
+        <button class="tab-button" onclick="showTab('equipment')">Inventory and What You Know</button>
+        <button class="tab-button" onclick="showTab('history')">History</button>
+      </div>
+
+      <!-- Tab Content -->
+      <div id="overview" class="tab-content active">
+        <h3>Overview</h3>
+        <p><strong>Name:</strong> Allayane Jaquette</p>
+        <p><strong>Race:</strong> Half-Elf</p>
+        <p><strong>Class:</strong> Bard</p>
+        <p><strong>Alignment:</strong> TBD</p>
+        <p><strong>Background:</strong> Folk Hero</p>
+      </div>
+
+      <div id="stats" class="tab-content">
+        <h3>Ability Scores</h3>
+        <ul style="columns: 2;">
+          <li><strong>Strength:</strong> 14</li>
+          <li><strong>Dexterity:</strong> 19</li>
+          <li><strong>Constitution:</strong> 16</li>
+          <li><strong>Intelligence:</strong> 13</li>
+          <li><strong>Wisdom:</strong> 16</li>
+          <li><strong>Charisma:</strong> 18</li>
+        </ul>
+
+        <h3>Senses</h3>
+        <ul style="columns: 1;">
+          <li><strong>Passive Perception:</strong> 17</li>
+          <li><strong>Passive Investigation:</strong> 15</li>
+          <li><strong>Passive Insight:</strong> 13</li>
+      </div>
+
+      <div id="backstory" class="tab-content">
+        <h3>Backstory</h3>
+        <p>
+Allayne grew up in a small village where he became known for two things: his music and his remarkable ability to charm absolutely everyone he met. Well... almost everyone.
+Allayne would argue that the few exceptions were simply people of questionable taste. From an early age, he discovered that a well-timed smile could open doors, a beautiful song could soften a hard heart, and looking one's best was never a waste of time. He took all three lessons very seriously.
+Then, one summer evening, everything changed. A band of raiders descended upon the village of Silverthach.
+<br><br>
+Most of the villagers fled or barricaded themselves inside their homes. Allayne, who had been enjoying a perfectly pleasant evening and was in no mood whatsoever to become involved in violence, initially decided that discretion was the better part of valor.
+Then he heard a child crying. And that changed everything. Allayne stepped out of hiding. He distracted the raiders with music and insults, led them on a ridiculous chase through the village, and used every ounce of charm, wit, and quick thinking he possessed to give the villagers time to escape.
+<br><br>
+He wasn't the strongest person there. He wasn't the bravest. And, according to Allayne, he certainly wasn't dressed for it. But he stayed. By morning, the raiders were gone, the villagers were safe, and Allayne had somehow become a hero.
+The villagers adored him. They told the story for years. Allayne, naturally, considers their admiration completely justified. He does not consider himself conceited. He considers himself appropriately aware of his many excellent qualities.
+        </p>
+        
+      </div>
+
+      <div id="equipment" class="tab-content">
+        <h3>Special Inventory Items</h3>
+        <ul>
+          <li>Emergency Float Serum</li>
+        </ul>
+
+        <h3>You know...</h3>
+        <ul>
+          <li><a href="characters.html">Riddick Alexsander</a></li>
+            <ul>
+              <li>He is from Witchglass</li>
+              <li>Has black striations</li>
+              <li>A weird symbol for a necklace</li>
+              <li><em>'Follow the sigils. Don't trust anyone.'</em></li>
+            </ul>
+        </ul>
+
+      </div>
+
+
+      <div id="history" class="tab-content">
+        
+      </div>
+
+    </section>
+  </main>
+
+  <script>
+    function showTab(tabId) {
+      const tabs = document.querySelectorAll('.tab-content');
+      const buttons = document.querySelectorAll('.tab-button');
+
+      tabs.forEach(tab => tab.classList.remove('active'));
+      buttons.forEach(btn => btn.classList.remove('active'));
+
+      document.getElementById(tabId).classList.add('active');
+      event.target.classList.add('active');
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const toggles = document.querySelectorAll(".session-toggle");
+    
+        toggles.forEach(toggle => {
+          toggle.addEventListener("click", function () {
+            const content = this.nextElementSibling;
+    
+            if (content.style.maxHeight) {
+              // Collapse it
+              content.style.maxHeight = null;
+            } else {
+              // Expand it to the actual scroll height
+              content.style.maxHeight = content.scrollHeight + "px";
+            }
+          });
+        });
+      });
+  </script>
+
+</body>
+</html>
