@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ronjaree 'RJ' Jarred</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Uncial+Antiqua&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <h1 class="title">Character Profile</h1>
+    <p class="subtitle">Ronjaree 'RJ' Jarred</p>
+    <nav>
+      <ul>
+        <li><a href="characters.html">Characters and NPC's</a></li>
+          <li><a href="sessionnotes.html">Session Notes</a></li>
+          <li><a href="lore.html">World Lore</a></li>
+          <li><a href="map.html">Map</a></li>
+          <li><a href="items.html">Items</a></li>
+          <li><a href="status.html">Characters Status</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="character-profile" style="padding: 2rem;">
+
+      <!-- Portrait -->
+      <div style="text-align: center;">
+        <img src="images/ronjaree.png" alt="Ronjaree Portrait" style="max-width: 300px; border-radius: 10px; box-shadow: 0 0 20px #444;">
+      </div>
+
+      <!-- Tabs -->
+      <div class="tab-buttons">
+        <button class="tab-button active" onclick="showTab('overview')">Overview</button>
+        <button class="tab-button" onclick="showTab('stats')">Stats</button>
+        <button class="tab-button" onclick="showTab('backstory')">Backstory</button>
+        <button class="tab-button" onclick="showTab('equipment')">Inventory and What You Know</button>
+        <button class="tab-button" onclick="showTab('history')">History</button>
+      </div>
+
+      <!-- Tab Content -->
+      <div id="overview" class="tab-content active">
+        <h3>Overview</h3>
+        <p><strong>Name:</strong> Ronjaree 'RJ' Jarred</p>
+        <p><strong>Race:</strong> Human</p>
+        <p><strong>Class:</strong> Barbarian</p>
+        <p><strong>Alignment:</strong> Neutral</p>
+        <p><strong>Background:</strong> Outlander</p>
+      </div>
+
+      <div id="stats" class="tab-content">
+        <h3>Ability Scores</h3>
+        <ul style="columns: 2;">
+          <li><strong>Strength:</strong> 18</li>
+          <li><strong>Dexterity:</strong> 14</li>
+          <li><strong>Constitution:</strong> 15</li>
+          <li><strong>Intelligence:</strong> 14</li>
+          <li><strong>Wisdom:</strong> 14</li>
+          <li><strong>Charisma:</strong> 13</li>
+        </ul>
+
+        <h3>Senses</h3>
+        <ul style="columns: 1;">
+          <li><strong>Passive Perception:</strong> 15</li>
+          <li><strong>Passive Investigation:</strong> 12</li>
+          <li><strong>Passive Insight:</strong> 12</li>
+      </div>
+
+      <div id="backstory" class="tab-content">
+        <h3>Backstory</h3>
+        <p>
+Born deep inside Colossus, the Kahuna of the volcanic range of Khar'mir to Halo and Felix Cassis. Delighted at the birth of their daughter, they ascended her to become a Daughter of Khar'mir.
+          This opportunity is only available to the Doyen and Doyenne pairs who are the elders and leaders of the Tuk people. Ronjaree grew up in and amongst the Tuk people and amongst their customs.
+          They are home to those outcast, shunned, or exiled from the world and take those no one else wants. Once a part of the Tuk people, forever a part of the Tuk people. They aren't bonded by blood, but
+          something far greater in their connection to the raw energy of Khar'mir.
+          <br><br>
+          She was heavily trained in the martial use of weapons since the day she could hold her first axe. Over time she came to favor the infamous trident and learned to fight with two instead of one.
+          She has no blood brothers or sisters, but many she would consider so. Ronjaree has spent her time learning the art of combat and how to best her opponents before things get out of hand. She enjoys helping
+          the newcomers get settled and has made herself a pillar of the Tuk people. 
+          <br><br>
+          As her test to the devotion of her people, she must go into the world and provide a safe haven for those cast aside by the civilities of society. So Ronjaree took this opportunity to explore the world as 
+          a great honor and seeks to save those that cannot save themselves.
+        </p>
+        
+      </div>
+
+      <div id="equipment" class="tab-content">
+        <h3>Special Inventory Items</h3>
+        <ul>
+          <li>Emergency Float Serum</li>
+        </ul>
+
+        <h3>You know...</h3>
+        <ul>
+          <li><a href="characters.html">Riddick Alexsander</a></li>
+            <ul>
+              <li>He is from Witchglass</li>
+              <li>Has black striations</li>
+              <li>A weird symbol for a necklace</li>
+              <li><em>'Follow the sigils. Don't trust anyone.'</em></li>
+            </ul>
+        </ul>
+
+      </div>
+
+
+      <div id="history" class="tab-content">
+        
+      </div>
+
+    </section>
+  </main>
+
+  <script>
+    function showTab(tabId) {
+      const tabs = document.querySelectorAll('.tab-content');
+      const buttons = document.querySelectorAll('.tab-button');
+
+      tabs.forEach(tab => tab.classList.remove('active'));
+      buttons.forEach(btn => btn.classList.remove('active'));
+
+      document.getElementById(tabId).classList.add('active');
+      event.target.classList.add('active');
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const toggles = document.querySelectorAll(".session-toggle");
+    
+        toggles.forEach(toggle => {
+          toggle.addEventListener("click", function () {
+            const content = this.nextElementSibling;
+    
+            if (content.style.maxHeight) {
+              // Collapse it
+              content.style.maxHeight = null;
+            } else {
+              // Expand it to the actual scroll height
+              content.style.maxHeight = content.scrollHeight + "px";
+            }
+          });
+        });
+      });
+  </script>
+
+</body>
+</html>
