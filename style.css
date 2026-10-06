@@ -340,6 +340,7 @@ section {
 
 .tab-content {
   display: none;
+  text-align: left;
   padding: 20px;
 }
 
