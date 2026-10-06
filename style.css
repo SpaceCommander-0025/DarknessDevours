@@ -487,10 +487,10 @@ section {
 }
 
 /* Character Profiles for A Blight */
-.character-profile {
+/* .character-profile {
     margin: 2rem auto;
     text-align: center;
-}
+} */
 
 .character-profile img {
     display: block;
@@ -500,15 +500,3 @@ section {
     border-radius: 10px;
 }
 
-/* /* Overview */
-#overview {
-  text-align: left;
-}
-
-#overview h3 {
-  text-align: left;
-}
-
-#overview p {
-  text-align: left;
-} */
