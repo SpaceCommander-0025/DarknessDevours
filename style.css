@@ -397,6 +397,21 @@ section {
   background-color: #f0f0f0;
 }
 
+/* Character Location */
+.character-location {
+  margin-bottom: 3rem;
+}
+
+.character-location h2 {
+  color: #bb86fc;
+  font-family: 'Cinzel', serif;
+  font-size: 1.8rem;
+  margin: 0 0 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #5a426d;
+  text-shadow: 0 0 8px rgba(187, 134, 252, 0.4);
+}
+
 /* Character Vault */
 .character-vault {
   display: flex;
@@ -437,24 +452,6 @@ section {
 }
 
 /* Status-based color highlights */
-/* .character-card .card.status-alive {
-  border: 20px solid green;
-}
-
-.status-dead {
-  border: 20px solid darkred;
-  opacity: 0.7;
-}
-
-.status-missing {
-  border: 20px solid orange;
-  animation: flicker 1.5s infinite;
-}
-
-.status-afflicted {
-  border: 20px solid purple;
-  box-shadow: 0 0 10px rgba(187, 134, 252, 0.5);
-} */
 
 .character-vault .card.status-alive {
   border: 2px solid #3cb371;
