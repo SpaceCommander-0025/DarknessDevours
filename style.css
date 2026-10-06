@@ -498,3 +498,16 @@ section {
     margin: 0 auto;
     border-radius: 10px;
 }
+
+/* Overview */
+#overview {
+  text-align: left;
+}
+
+#overview h3 {
+  text-align: left;
+}
+
+#overview p {
+  text-align: left;
+}
