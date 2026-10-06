@@ -438,21 +438,21 @@ section {
 
 /* Status-based color highlights */
 .status-alive {
-  border-left: 20px solid green;
+  border: 20px solid green;
 }
 
 .status-dead {
-  border-left: 20px solid darkred;
+  border: 20px solid darkred;
   opacity: 0.7;
 }
 
 .status-missing {
-  border-left: 20px solid orange;
+  border: 20px solid orange;
   animation: flicker 1.5s infinite;
 }
 
 .status-afflicted {
-  border-left: 20px solid purple;
+  border: 20px solid purple;
   box-shadow: 0 0 10px rgba(187, 134, 252, 0.5);
 }
 
