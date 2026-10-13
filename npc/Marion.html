@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marion Vargas</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Uncial+Antiqua&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <h1 class="title">Character Profile</h1>
+    <p class="subtitle">Marion Vargas</p>
+    <nav>
+      <ul>
+        <li><a href="../characters.html">Characters and NPC's</a></li>
+          <li><a href="../sessionnotes.html">Session Notes</a></li>
+          <li><a href="../lore.html">World Lore</a></li>
+          <li><a href="../map.html">Map</a></li>
+          <li><a href="../items.html">Items</a></li>
+          <li><a href="../status.html">Characters Status</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="character-profile" style="padding: 2rem;">
+
+      <!-- Portrait -->
+      <div style="text-align: center;">
+        <img src="Marion.png" alt="Marion Portrait" style="max-width: 300px; border-radius: 10px; box-shadow: 0 0 20px #444;">
+      </div>
+
+      <!-- Tabs -->
+      <div class="tab-buttons">
+        <button class="tab-button active" onclick="showTab('overview')">Overview</button>
+        <button class="tab-button" onclick="showTab('profile')">Profile</button>
+        <!-- <button class="tab-button" onclick="showTab('stats')">Stats</button>
+        <button class="tab-button" onclick="showTab('backstory')">Backstory</button>
+        <button class="tab-button" onclick="showTab('equipment')">Inventory and What You Know</button> -->
+      </div>
+
+      <!-- Tab Content -->
+      <div id="overview" class="tab-content active">
+        <h3>Overview</h3>
+        <p><strong>Name:</strong> Marion Vargas</p>
+        <p><strong>Race:</strong> Human</p>
+        <p><strong>Class:</strong> Backup Diver</p>
+        <p><strong>Alignment:</strong> Lawful Good</p>
+        <p><strong>Background:</strong> Diving</p>
+
+      </div>
+
+      <div id="profile" class="tab-content">
+        <figure class="cp">
+          <img 
+              src="MarionCard.png"
+              alt="Character profile for Marion Vargas"
+          >
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function showTab(tabId) {
+      const tabs = document.querySelectorAll('.tab-content');
+      const buttons = document.querySelectorAll('.tab-button');
+
+      tabs.forEach(tab => tab.classList.remove('active'));
+      buttons.forEach(btn => btn.classList.remove('active'));
+
+      document.getElementById(tabId).classList.add('active');
+      event.target.classList.add('active');
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const toggles = document.querySelectorAll(".session-toggle");
+    
+        toggles.forEach(toggle => {
+          toggle.addEventListener("click", function () {
+            const content = this.nextElementSibling;
+    
+            if (content.style.maxHeight) {
+              // Collapse it
+              content.style.maxHeight = null;
+            } else {
+              // Expand it to the actual scroll height
+              content.style.maxHeight = content.scrollHeight + "px";
+            }
+          });
+        });
+      });
+  </script>
+
+</body>
+</html>
