@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ashmaw Crevasse</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Uncial+Antiqua&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="title">Ashmaw Crevasse</h1>
+        <p class="subtitle">The Depths Are Calling</p>
+        <nav>
+            <ul>
+                <li><a href="characters.html">Characters and NPC's</a></li>
+                <li><a href="sessionnotes.html">Session Notes</a></li>
+                <li><a href="lore.html">World Lore</a></li>
+                <li><a href="map.html">Map</a></li>
+                <li><a href="items.html">Items</a></li>
+                <li><a href="status.html">Characters Status</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+          <div class="tabs">
+            <div class="tab-buttons">
+              <button class="tab-button active" onclick="switchTab('about-tab')">About</button>
+              <button class="tab-button" onclick="switchTab('map-tab')">Map</button>
+            </div>
+        
+            <!-- Tab: About -->
+            <section id="about-tab" class="tab-content active">
+            <h2>Life in Ashmaw</h2>
+        <p>
+          TBD
+        </p>
+              <h2>Places in Ashmaw</h2>
+        <p>
+          Deepwood Adventurer's Tavern
+          <br>Ashmaw Campsites
+          <br>Ashmaw Junkyard
+          <br>Buy, Sell, and Trade (Inside Junkyard)
+          <br>Repair (Inside Junkyard)
+          <br>Maw Market
+          <br>Walk the Past Tavern
+          <br>Ashmaw Graveyard
+          <br>Stables and Ferries
+          <br>Crevasse Delights
+          <br>Bits and Pots
+          <br>Oldie's Magic
+          <br>Sader's General
+          <br>Ashmaw Hospital
+        </p>
+            
+            </section>
+        
+            <!-- Tab: Map -->
+            <section id="map-tab" class="tab-content">
+              <h2>Interactive Map</h2>
+              <div class="map-container">
+                <img src="images/ashmaw.jpg" alt="Ashmaw Town Map" class="map" />
+              </div>
+            </section>
+        
+    </main>
+
+  <script>
+
+        function switchTab(tabId) {
+          // Hide all tab contents
+          document.querySelectorAll('.tab-content').forEach(tab => {
+            tab.classList.remove('active');
+          });
+        
+          // Remove 'active' from all tab buttons
+          document.querySelectorAll('.tab-button').forEach(btn => {
+            btn.classList.remove('active');
+          });
+        
+          // Show the selected tab
+          document.getElementById(tabId).classList.add('active');
+        
+          // Set the clicked button to active
+          const clickedButton = Array.from(document.querySelectorAll('.tab-button'))
+            .find(btn => btn.textContent.toLowerCase().includes(tabId.split('-')[0]));
+          if (clickedButton) clickedButton.classList.add('active');
+        }
+     </script>
+</body>
+</html>
