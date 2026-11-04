@@ -7,6 +7,21 @@
     <link rel="stylesheet" href="style.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Uncial+Antiqua&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+    .image-row {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .image-row img {
+        width: 30%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+</style>
 </head>
 <body>
     <header>
@@ -30,29 +45,45 @@
             <div class="tab-buttons">
               <button class="tab-button active" onclick="switchTab('about-tab')">About</button>
               <button class="tab-button" onclick="switchTab('map-tab')">Map</button>
+              <button class="tab-button" onclick="switchTab('people-tab')">People of Ashmaw</button>
             </div>
         
             <!-- Tab: About -->
             <section id="about-tab" class="tab-content active">
             <h2>Life in Ashmaw</h2>
         <p>
-          TBD
+          Ashmaw is harsh environment to survive as it is mostly just a barren muddy mess. It is quite wet throughout the year making the mud into a slush. So they get a lot of their food and water through caravans
+          that come through the Maw Market. The locals do their best to provide for the immediate town and utilize the adventuring nature of the Crevasse to sell trinkets, wares, and junk to supply the money for the 
+          rest of what they may need. The adventuring groups that come and go aren't the greatest part of Ashmaw as they are often times routy and very greedy when it comes to the Crevasse. Many disappear or die when 
+          they try to dive into the depths without proper knowledge or equipment. 
+          <br><br>
+          Ashmaw is well known for mineral, metals, and artifacts that are brought up from the depths. They sell a lot of gemstones to the Magic Dealers that come through and plenty of souvenirs with the visiting population.
+          There are plenty of places to buy, sell, and trade the rewards from the depths of the Crevasse. The locals are very kind and generous people and if you carry your weight and show your character, you can grow
+          into becoming a local yourself. 
+          <br><br>
+          Magic specifically Necromancy does have a place in Ashmaw. The Graveyard is by far one of the largest locations in Ashmaw as many a souls have departed this life here in Ashmaw. The locals will use this to there
+          advantage to make ends meet, prepare for hard times, and secure the supplies and resources that they need.
         </p>
               <h2>Places in Ashmaw</h2>
         <p>
-          Deepwood Adventurer's Tavern
+          <strong>Deepwood Adventurer's Tavern</strong>
           <br>Ashmaw Campsites
           <br>Ashmaw Junkyard
-          <br>Buy, Sell, and Trade (Inside Junkyard)
-          <br>Repair (Inside Junkyard)
+          <br>&ensp; Buy, Sell, and Trade (Inside Junkyard)
+          <br>&ensp; Repair (Inside Junkyard)
           <br>Maw Market
           <br>Walk the Past Tavern
+          <br>&ensp; Owners: Milliecent and Curra Geon
           <br>Ashmaw Graveyard
           <br>Stables and Ferries
           <br>Crevasse Delights
+          <br>&ensp; Owners: Arma and Percival Delight
           <br>Bits and Pots
+          <br>&ensp; Owner: Gaten Austenwild
           <br>Oldie's Magic
+          <br>&ensp; Owner: Fredrick 'Oldie' Oldan
           <br>Sader's General
+          <br>&ensp; Owner: Sader Ben
           <br>Ashmaw Hospital
         </p>
             
@@ -65,6 +96,21 @@
                 <img src="images/ashmaw.png" alt="Ashmaw Town Map" class="map" />
               </div>
             </section>
+
+              <section id="people-tab" class="tab-content">
+                  <h2>Locals of Ashmaw</h2>
+                  <h3>The Delights</h3>
+                  <div class="image-row">
+                    <img src="arma.jpg" alt="Arma Delight">
+                    <img src="percival.jpg" alt="Percival Delight">
+                    <img src="naomi.jpg" alt="Naomi Delight">
+                  </div>
+                  <h3>The Bens</h3>
+                  <div class="image-row">
+                    <img src="sader.jpg" alt="Sader Ben">
+                    <img src="sawder.jpg" alt="Sawder Ben">
+                  </div>
+              </section>
         
     </main>
 
