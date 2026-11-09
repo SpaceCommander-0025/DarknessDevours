@@ -87,7 +87,82 @@
           <br>&ensp; Owner: Sader Ben
           <br><strong>Ashmaw Hospital</strong>
         </p>
+
+
+            <!--The Shadow Guardians-->
+            <section class="session-note">
+            <button class="session-toggle">The Shadow Guardians</button>
+            <div class="session-content">
+        
+              <section class="session-note">
+              <h1>Origins</h1>
+              <p>Following the events of the Ashen Greeting, a new sacred order of the youngest members of Ashmaw decided that never again would they endure the betrayal and slaughter of there own people to an uknown
+              enemy. Bound by blood and an oath to each other, they formed The Shadow Guardians.</p>
+              <br><br>
+              <h1>Perceptions of The Group</h1>
+              <p>Sneaky. Deceptive. Cunningly smart. Agile. Defensive. Strong. All words that others would use to describe them, however if you approached the locals about this group, not much is known. 
+              The Locals are rather shocked to hear about a mysterious group operating in their home although the town of Ashmaw has been in a bend of good graces recently. Less attacks and strange vistors. 
+              Perhaps this local group is helping protect the town.</p>
+              <br><br>
+              <p>The adventurer's and merchants passing through though, they have more than a few not so nice things to say. Some adventurer's have gone missing. Some arrive with dreams of riches determined to find
+              their place here and they next day they are packing their bags. Leaving for better horizons. Somewhere safer. Yet no adventurer exactly remembers why they are leaving, just that an experience they don't
+              fully remember is compelling them too.</p>
+              <br><br>
+              <p>MORE ON THE SG TO COME AS DISCOVERED...</p>
+              </section>
             
+            </div>
+            
+            </section>
+
+            <!--The Ashen Greeting-->
+            <section class="session-note">
+            <button class="session-toggle">The Ashen Greeting</button>
+            <div class="session-content">
+        
+              <section class="session-note">
+              <h1>Promising Beginnings</h1>
+              <p>For generations, necromancy has been an accepted and respected practice in the world. Particularly powerful necromancers often serve as community leaders, healers, historians, and guardians of the 
+              dead. The adults in these communities were powerful. They knew how to protect themselves, their families, and their homes. Unfortunately, that made them targets.</p>
+              <br><br>
+              <p>A mysterious organization began traveling from settlement to settlement, presenting themselves as scholars, healers, and practitioners of an unfamiliar branch of necromancy. 
+              They called themselves, <em>The Mirrored Servants</em>.</p>
+              <br><br>
+              <p>They claimed to have discovered a new form of necromancy that could protect communities from the rising darkness. They offered to teach it. They offered to help. And most importantly, they offered 
+              hope. The older necromancers welcomed them. They shared their knowledge, opened their homes, introduced them to their children, and allowed them into places that outsiders would never normally be 
+              permitted. Then came the night everything changed.</p>
+              <br><br>
+              <h1>A Fated Evening</h1>
+              <p>The Mirrored Servants had been studying powerful necromancers for years. They discovered that the strongest necromancers possessed something they called an Ancestral Anchor: a connection between 
+              their souls, their magic, and the generations of family members who came before them.</p>
+              <br><br>
+              <p>They wanted those connections or at the very least that power. And if they couldn’t take it, they would extinguish it. They developed a dark magic that could identify and consume these powerful 
+              connections, effectively killing the strongest necromancers and leaving their families vulnerable. But they needed the adults to trust them first. When the time came, they turned on the community.</p>
+              <br><br>
+              <p>The adult necromancers were slaughtered or consumed by the magic. Their homes were destroyed. Their families were scattered. Some children watched their parents die. Others hid beneath floorboards, 
+              in cellars, or inside old burial chambers. Some were forced to flee without knowing whether their parents were dead or alive. And some had to make the decision to leave their parents behind.</p>
+              <br><br>
+              <p>The Mirrored Servants deliberately left certain family members alive. Some were too young to be useful. Some were magically insignificant. Others were left behind as bait. The surviving young 
+              adults eventually discovered one another. They had all lost something, and they all knew the same thing. They couldn't trust anyone who claimed to be there to help.</p>
+              </section>
+            
+            </div>
+            
+            </section>
+
+            !--The Mirrored Servants-->
+            <section class="session-note">
+            <button class="session-toggle">The Mirrored Servants</button>
+            <div class="session-content">
+        
+              <section class="session-note">
+              <p>MORE ON THE MIRRORED SERVANTS TO COME AS DISCOVERED...</p>
+              </section>
+            
+            </div>
+            
+            </section>
+
             </section>
         
             <!-- Tab: Map -->
@@ -115,7 +190,7 @@
 
                   <h3>The Deepwoods</h3>
                   <div class="image-row">
-                    <img src="images/deepwood.jpg" alt="The Deepwoods">
+                    <img src="images/deepwood.png" alt="The Deepwoods">
                     <img src="images/britt.png" alt="Britt Deepwood">
                   </div>
 
@@ -167,6 +242,24 @@
             .find(btn => btn.textContent.toLowerCase().includes(tabId.split('-')[0]));
           if (clickedButton) clickedButton.classList.add('active');
         }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggles = document.querySelectorAll(".session-toggle");
+    
+        toggles.forEach(toggle => {
+          toggle.addEventListener("click", function () {
+            const content = this.nextElementSibling;
+    
+            if (content.style.maxHeight) {
+              // Collapse it
+              content.style.maxHeight = null;
+            } else {
+              // Expand it to the actual scroll height
+              content.style.maxHeight = content.scrollHeight + "px";
+            }
+          });
+        });
+      });
      </script>
 </body>
 </html>
